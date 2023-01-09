@@ -1,0 +1,2 @@
+https://trabajo-parcial-2-production.up.railway.app/caja   backend
+https://velvety-fairy-d6c482.netlify.app/                  frontend
