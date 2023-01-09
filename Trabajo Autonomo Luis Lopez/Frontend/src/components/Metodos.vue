@@ -67,7 +67,7 @@
                 </div>
                 <div class="container-fluid bg-white w-25 border border-dark border-opacity-50 rounded"
                     v-if="!showInversionRealizada">
-                    <h2 class="text-center ">Ingresar de Notas</h2>
+                    <h2 class="text-center ">Control de Inversiones Realizadas</h2>
                     <form action="" class="" @submit.prevent="crearInversionRealizada()">
                         <div class="mx-1 mt-3">
                             <div class="text-center">
@@ -344,17 +344,17 @@ import axios from 'axios';
         },
         methods:{
             mostrarRegistros(){
-                axios.get('https://web-production-f7a1.up.railway.app/inversionista')
+                axios.get('http://localhost:5000/inversionista')
                 .then(resp =>{
                     this.registroInversionistas = resp.data
-                    console.log('Luis'+resp.data)
+                    console.log(resp.data)
                 })
-                axios.get('https://web-production-f7a1.up.railway.app/conceptoInversion')
+                axios.get('http://localhost:5000/concepto-inversion')
                 .then(resp =>{
                     this.registroConceptoInversiones = resp.data
                     console.log(resp.data)
                 })
-                axios.get('https://web-production-f7a1.up.railway.app/inversionRealizada')
+                axios.get('http://localhost:5000/inversion-realizada')
                 .then(resp =>{
                     this.registroInversionesRealizadas = resp.data
                     console.log(resp.data)
@@ -362,7 +362,7 @@ import axios from 'axios';
 
             },
             crearInversionista(){
-                axios.post('https://web-production-f7a1.up.railway.app/inversionista', this.registroInversionista)
+                axios.post('http://localhost:5000/inversionista/create', this.registroInversionista)
                 .then(resp => {
                     this.registroInversionistas.push(resp.data)
                 })
@@ -370,7 +370,7 @@ import axios from 'axios';
                 this.showConcepto= false
             },
             crearConceptoInversion(){
-                axios.post('https://web-production-f7a1.up.railway.app/conceptoInversion', this.registroConceptoInversion)
+                axios.post('http://localhost:5000/concepto-inversion/create', this.registroConceptoInversion)
                 .then(resp => {
                     this.registroConceptoInversiones.push(resp.data)
                 })
@@ -378,7 +378,7 @@ import axios from 'axios';
                 this.showInversionRealizada = false
             },
             crearInversionRealizada(){
-                axios.post('https://web-production-f7a1.up.railway.app/inversionRealizada', this.registroInversionRealizada)
+                axios.post('http://localhost:5000/inversion-realizada/create', this.registroInversionRealizada)
                 .then(resp => {
                     this.registroInversionesRealizadas.push(resp.data)
                 })
@@ -386,42 +386,42 @@ import axios from 'axios';
                 this.showInversionista=false
             },
             registroeliminarInversionsita( _id ){
-                axios.delete(`https://web-production-f7a1.up.railway.app/inversionista/${_id}`)
+                axios.delete(`http://localhost:5000/inversionista/${_id}`)
                 .then(resp=>{
                     const index  = this.registroInversionistas.findIndex(i => i._id === resp.data._id)
                     this.registroInversionistas.splice(index, 1)
                 })
             },
             registroeliminarConceptoInversion(_id){
-                axios.delete(`https://web-production-f7a1.up.railway.app/conceptoInversion/${_id}`)
+                axios.delete(`http://localhost:5000/concepto-inversion/${_id}`)
                 .then(resp=>{
                     const index  = this.registroConceptoInversiones.findIndex(i => i._id === resp.data._id)
                     this.registroConceptoInversiones.splice(index, 1)
                 })
             },
             registroeliminarInversion(_id){
-                axios.delete(`https://web-production-f7a1.up.railway.app/inversionRealizada/${_id}`)
+                axios.delete(`http://localhost:5000/inversion-realizada/${_id}`)
                 .then(resp=>{
                     const index  = this.registroInversionesRealizadas.findIndex(i => i._id === resp.data._id)
                     this.registroInversionesRealizadas.splice(index, 1)
                 })
             },
             editarregistroInversionista(_id){
-                axios.get(`https://web-production-f7a1.up.railway.app/inversionista/${_id}`)
+                axios.get(`http://localhost:5000/inversionista/${_id}`)
                 .then(resp =>{
                     this.registroInversionista.nombre= resp.data.nombre
                     this.registroInversionista.identificacion= resp.data.identificacion
                 })
             },
             editarregistroConceptoInversion(_id){
-                axios.get(`https://web-production-f7a1.up.railway.app/conceptoInversion/${_id}`)
+                axios.get(`http://localhost:5000/concepto-inversion/${_id}`)
                 .then(resp =>{
                     this.registroConceptoInversion.concepto = resp.data.concepto
                     this.registroConceptoInversion.detalle = resp.data.detalle
                 })
             },
             editarregistroInversionRealizada(_id){
-                axios.get(`https://web-production-f7a1.up.railway.app/inversionRealizada/${_id}`)
+                axios.get(`http://localhost:5000/inversion-realizada/${_id}`)
                 .then(resp =>{
                     this.registroInversionRealizada.idinversionista = resp.data.idinversionista
                     this.registroInversionRealizada.idconceptoinversion = resp.data.idconceptoinversion
@@ -431,7 +431,7 @@ import axios from 'axios';
                 })
             },
             editarInversionista(item){
-                axios.put(`https://web-production-f7a1.up.railway.app/inversionista/${item._id}`, item )
+                axios.put(`http://localhost:5000/inversionista/${item._id}`, item )
                 .then(resp =>{
                     const index = this.registroInversionistas.findIndex(n=>n._id === resp.data._id)
                     this.registroInversionistas[index].nombre = resp.data.nombre
@@ -439,7 +439,7 @@ import axios from 'axios';
                 })
             },
             editarConceptoInversion(item){
-                axios.put(`https://web-production-f7a1.up.railway.app/conceptoInversion/${item._id}`, item )
+                axios.put(`http://localhost:5000/concepto-inversion/${item._id}`, item )
                 .then(resp =>{
                     const index = this.registroConceptoInversiones.findIndex(n=>n._id === resp.data._id)
                     this.registroConceptoInversiones[index].concepto = resp.data.concepto
@@ -448,7 +448,7 @@ import axios from 'axios';
                 })
             },
             editarInversion(item){
-                axios.put(`https://web-production-f7a1.up.railway.app/inversionRealizada/${item._id}`, item )
+                axios.put(`http://localhost:5000/inversion-realizada/${item._id}`, item )
                 .then(resp =>{
                     const index = this.registroInversionesRealizadas.findIndex(n=>n._id === resp.data._id)
                     this.registroInversionesRealizadas[index].idinversionista = resp.data.idinversionista
