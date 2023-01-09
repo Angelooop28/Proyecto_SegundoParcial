@@ -1,0 +1,2 @@
+https://web-production-f7a1.up.railway.app/idioma  backend
+https://golden-sopapillas-d009bb.netlify.app/     frontend
