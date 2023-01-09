@@ -8,7 +8,7 @@
 
 
 
-# Integrantes:
+# Integrantes ![image](https://user-images.githubusercontent.com/88465789/211234417-fc51859c-1296-4ed8-a428-ea7646a64e2c.png)
 -   Edward Angelo Espinoza Soledispa
 -   Luis David López Bailón
 -   Michael Javier Palacios Pincay
