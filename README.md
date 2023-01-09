@@ -9,10 +9,10 @@
 
 
  Integrantes:
-📌  Edward Angelo Espinoza Soledispa
-📌  Luis David Lopez Bailon
-📌  Michael Javier Palacios Pincay
-📌  Kelvin Manuel Lopez Quijije
+- 📌  Edward Angelo Espinoza Soledispa
+- 📌  Luis David Lopez Bailon
+- 📌  Michael Javier Palacios Pincay
+- 📌  Kelvin Manuel Lopez Quijije
 
 
 
