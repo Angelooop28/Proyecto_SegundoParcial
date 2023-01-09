@@ -1,6 +1,6 @@
 # Trabajo Autónomo Segundo Parcial 🚀
 
-#### Proyecto en la web, usando un framework para Backend y Fronted  👨‍💻💻🌐
+### Proyecto en la web, usando un framework para Backend y Fronted  👨‍💻💻🌐
 ### Aplicando la arquitectura dockers, con su gestor de base de datos Mongodb ⚙️
 ### Capa de servicios Monolíticos con Nest.js ⚙️
 ### Microservicios con EXPRESS ⚙️
@@ -8,11 +8,11 @@
 
 
 
- Integrantes:
-- 📌  Edward Angelo Espinoza Soledispa
-- 📌  Luis David Lopez Bailon
-- 📌  Michael Javier Palacios Pincay
-- 📌  Kelvin Manuel Lopez Quijije
+# Integrantes:
+-   Edward Angelo Espinoza Soledispa
+-   Luis David Lopez Bailon
+-   Michael Javier Palacios Pincay
+-   Kelvin Manuel Lopez Quijije
 
 
 
