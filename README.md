@@ -1,5 +1,4 @@
-# Trabajo Autónomo Segundo Parcial ![image](https://user-images.githubusercontent.com/88465789/211234447-39510cb5-ef89-43d2-a8c3-2128f9b59619.png)
-
+# Trabajo Autónomo Segundo Parcial 🚀
 
 ### Proyecto en la web, usando un framework para Backend y Fronted  👨‍💻💻🌐
 ### Aplicando la arquitectura dockers, con su gestor de base de datos Mongodb ⚙️
@@ -9,7 +8,7 @@
 
 
 
-# Integrantes 🚀
+# Integrantes 
 -   Edward Angelo Espinoza Soledispa
 -   Luis David López Bailón
 -   Michael Javier Palacios Pincay
